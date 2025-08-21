@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class GestorTareas {
-    private ArrayList<Tarea> listaTareas;
+    private final ArrayList<Tarea> listaTareas;
 
     public GestorTareas() {
         listaTareas = new ArrayList<>();
