@@ -6,15 +6,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int opcion;
-        do {
-            mostrarMenu();
-            opcion = leerEntero("Elige una opción: ");
-            ejecutarOpcion(opcion);
-        } while (opcion != 0);
-
-        System.out.println("👋 Saliendo del sistema...");
-        sc.close();
+        try (sc) {
+            int opcion;
+            do {
+                mostrarMenu();
+                opcion = leerEntero("Elige una opción: ");
+                ejecutarOpcion(opcion);
+            } while (opcion != 0);
+            
+            System.out.println("Saliendo del sistema...");
+        }
     }
 
     private static void mostrarMenu() {
